@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.gcy.ssm.mapper.DeviceTroubleMapper" >
+  <resultMap id="BaseResultMap" type="com.gcy.ssm.beans.DeviceTrouble" >
+    <id column="trouble_id" property="troubleId" jdbcType="VARCHAR" />
+    <result column="trouble_direct" property="troubleDirect" jdbcType="VARCHAR" />
+    <result column="trouble_num" property="troubleNum" jdbcType="INTEGER" />
+    <result column="trouble_date" property="troubleDate" jdbcType="TIMESTAMP" />
+    <result column="repair_date" property="repairDate" jdbcType="TIMESTAMP" />
+    <result column="dev_state" property="devState" jdbcType="VARCHAR" />
+    <result column="dev_id" property="devId" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    trouble_id, trouble_direct, trouble_num, trouble_date, repair_date, dev_state, dev_id
+  </sql>
+  
+  <select id="select" resultType="java.util.Map"   >
+    select  * from device_trouble
+  </select>
+ 
+</mapper>
